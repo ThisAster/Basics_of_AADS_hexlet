@@ -7,10 +7,12 @@ public class QuickSort {
     public static int partition(int[] array, int left, int right, int pivot) {
         while(true) {
             // находим первый элемент для "неправильной пары"
+            // пока элемент меньше опорного элемента, пропускаем
             while (array[left] < pivot) {
                 left++;
             }
             // находим второй элемент для "неправильной пары"
+            // пока элемент больше опорного элемента, пропускаем
             while (array[right] > pivot) {
                 right--;
             }
