@@ -33,22 +33,27 @@ public class QuickSortWithRecursive {
                 right.add(i);
             }
         }
+        left = quickSort(left);
+        right = quickSort(right);
         // создаем список, в котором у нас будут упорядоченные элементы
         List<Integer> sortedArr = new ArrayList<>();
         // добавляем сначала в левую часть массива, рекурсивно вызываем до тех пор
         // пока у нас все элементы не будут упорядочены в левой части
-        sortedArr.addAll(quickSort(left));
+        sortedArr.addAll(left);
         // добавляем опорные элементы, которые являются началом правого массива
         sortedArr.addAll(middle);
         // добавляем в правую часть массива, рекурсивно вызываем до тех пор
         // пока у нас все элементы не будут упорядочены в правой части
-        sortedArr.addAll(quickSort(right));
+        sortedArr.addAll(right);
 
         return sortedArr;
     }
     public static void main(String[] args) {
-        List<Integer> arr = List.of(3, 6, 8, 10, 1, 2, 1);
-        List<Integer> sortedArr = quickSort(new ArrayList<>(arr));
+        List<Integer> arr = List.of(86, 66, 44, 77, 56, 64, 76, 39, 32, 93, 33, 54, 63, 96, 5, 41, 20, 58, 55, 28);
+        var start = System.nanoTime();
+        List<Integer> sortedArr = quickSort(arr);
+        var end = System.nanoTime();
+        System.out.println(end - start);
         System.out.println(sortedArr);
     }
 }

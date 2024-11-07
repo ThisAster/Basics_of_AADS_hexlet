@@ -16,8 +16,11 @@ public class BubbleSort {
     }
 
     public static void main(String[] args) {
-        int[] arr = {5, 4, 6, 3, 2, 1};
+        int[] arr = {86, 66, 44, 77, 56, 64, 76, 39, 32, 93, 33, 54, 63, 96, 5, 41, 20, 58, 55, 28};
+        var start = System.nanoTime();
         bubleSort(arr);
+        var end = System.nanoTime();
+        System.out.println(end - start);
         Arrays.stream(arr).forEach(System.out::println);
     }
 }

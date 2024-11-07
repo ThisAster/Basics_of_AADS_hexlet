@@ -49,8 +49,11 @@ public class QuickSort {
         quickSort(array, splitIndex, right);
     }
     public static void main(String[] args) {
-        int[] items = {2, 3, 4, 3, 1, 2, 4, 5, 1, 2};
+        int[] items = {86, 66, 44, 77, 56, 64, 76, 39, 32, 93, 33, 54, 63, 96, 5, 41, 20, 58, 55, 28};
+        var start = System.nanoTime();
         quickSort(items, 0, items.length - 1);
+        var end = System.nanoTime();
+        System.out.println(end - start);
         Arrays.stream(items).forEach(System.out::println);
     }
 }
