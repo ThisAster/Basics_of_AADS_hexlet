@@ -1,4 +1,4 @@
-package com.thisaster.homework3;
+package com.thisaster.homework.homework3;
 
 import java.util.ArrayList;
 import java.util.List;
