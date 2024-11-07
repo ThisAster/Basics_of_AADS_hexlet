@@ -3,6 +3,7 @@ package com.thisaster.homework3;
 import java.util.ArrayList;
 import java.util.List;
 
+//realisation quick sort in different sorting directions
 public class Solution {
 
     private static List<Integer> quickSort(List<Integer> array, String direction) {
