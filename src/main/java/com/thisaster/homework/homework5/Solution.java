@@ -5,7 +5,7 @@ public class Solution {
 
     public static LinkedList reverse(LinkedList list) {
         if (list.head == null) {
-            return new LinkedList();
+            return list;
         }
         Object headValue = list.head.value;
         Object tailValue = list.tail.value;
