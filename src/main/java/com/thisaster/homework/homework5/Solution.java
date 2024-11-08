@@ -7,14 +7,10 @@ public class Solution {
         if (list.head == null) {
             return list;
         }
-        Object headValue = list.head.value;
-        Object tailValue = list.tail.value;
         LinkedList newList = new LinkedList();
-        while (tailValue != headValue) {
-            Object lastElem = list.tail.value;
-            tailValue = list.tail.value;
-            newList.append(lastElem);
-            list.delete(tailValue);
+        while (list.head != null) {
+            newList.append(list.tail.value);
+            list.delete(list.tail.value);
         }
         return newList;
     }
