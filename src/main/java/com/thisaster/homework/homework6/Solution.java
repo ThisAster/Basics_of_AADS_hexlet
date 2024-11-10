@@ -2,14 +2,15 @@ package com.thisaster.homework.homework6;
 
 public class Solution {
     public static DoubleLinkedList swap(DoubleLinkedList collection) {
-        if (collection.head == null && collection.tail == null) {
+        if (collection.head == null) return collection;
+        else if (collection.head == collection.tail) return collection;
+        else {
+            DoubleLinkedListNode newHeadNode = new DoubleLinkedListNode(collection.head.next.value, collection.head.next.previous);
+            DoubleLinkedListNode headNextNode = new DoubleLinkedListNode(collection.head.value, collection.head.next.next);
+            collection.head = newHeadNode;
+            collection.head.next = headNextNode;
             return collection;
         }
-        DoubleLinkedListNode newHeadNode = new DoubleLinkedListNode(collection.head.next.value, collection.head.next.previous);
-        DoubleLinkedListNode headNextNode = new DoubleLinkedListNode(collection.head.value, collection.head.next.next);
-        collection.head = newHeadNode;
-        collection.head.next = headNextNode;
-        return collection;
     }
 
     public static void main(String[] args) {
