@@ -1,5 +1,6 @@
 package com.thisaster.homework.homework6;
 
+// swap first and second elements in doubleLinkedList
 public class Solution {
     public static DoubleLinkedList swap(DoubleLinkedList collection) {
         if (collection.head == null) return collection;
