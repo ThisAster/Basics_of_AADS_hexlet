@@ -18,7 +18,7 @@ public class Solution {
         return strBuilder.toString();
     }
 
-    public static boolean run (String str1, String str2) {
+    public static boolean run(String str1, String str2) {
         String newString1 = processString(str1);
         String newString2 = processString(str2);
         return newString1.equals(newString2);
