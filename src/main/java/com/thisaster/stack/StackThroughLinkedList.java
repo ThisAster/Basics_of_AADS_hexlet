@@ -6,7 +6,7 @@ import java.util.List;
 public class StackThroughLinkedList<T> {
     List<T> stack = new LinkedList<>();
     public void push(T value) {
-        stack.add(value);
+        stack.addFirst(value);
     }
     public T pop() {
         return stack.removeFirst();
